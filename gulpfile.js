@@ -2,7 +2,7 @@
 
 // Параметры для gulp-autoprefixer
 let autoprefixerList = [
-    'Chrome >= 45',
+		'Chrome >= 45',
 	'Firefox ESR',
 	'Edge >= 12',
 	'Explorer >= 10',
@@ -14,15 +14,15 @@ let autoprefixerList = [
 
 // Функция вывода ошибки
 function log(error) {
-    console.log([
-        '',
-        "----------ERROR MESSAGE START----------",
-        ("[" + error.name + " in " + error.plugin + "]"),
-        error.message,
-        "----------ERROR MESSAGE END----------",
-        ''
-    ].join('\n'));
-    this.end();
+	console.log([
+		'',
+		"----------ERROR MESSAGE START----------",
+		("[" + error.name + " in " + error.plugin + "]"),
+		error.message,
+		"----------ERROR MESSAGE END----------",
+		''
+	].join('\n'));
+	this.end();
 }
 
 // Инициализация Gulp плагинов 
@@ -71,10 +71,10 @@ gulp.task('scripts', function() {
 
 // Запуск сервера
 gulp.task('browser-sync', () => {
-    browserSync({
-        server: {baseDir: 'dist'},
-        notify: false
-    });
+	browserSync({
+		server: {baseDir: 'dist'},
+		notify: false
+	});
 });
 
 // Задача start
